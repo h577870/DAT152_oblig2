@@ -31,3 +31,11 @@ Write a Java application (not web application) for the store. The store should c
 and cart and should be internationalized localized to three locations. No GUI (graphical user
 interface) is needed, use the console for user interaction. Do not create the custom tags, but you
 should write code for the functionality for copyright and shorttext.
+
+### Assignment 2.2 :arrow_down:
+Change the code from 2.1 to become a web application for the store. Do not create the custom
+tags
+
+### Assignment 2.2 :arrow_down:
+Add the custom tags.
+ 
