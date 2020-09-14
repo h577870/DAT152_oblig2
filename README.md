@@ -8,6 +8,9 @@
 - Aksel Stokka Hestnes
 - Christian Føleide
 
+[Internationalization](https://www.tutorialspoint.com/jsp/jsp_internationalization.htm)
+[Custom tags](https://www.tutorialspoint.com/jsp/jsp_custom_tags.htm)
+
 ### Requirements :arrow_down:
 
 | Requirement | Progress |
@@ -36,6 +39,6 @@ should write code for the functionality for copyright and shorttext.
 Change the code from 2.1 to become a web application for the store. Do not create the custom
 tags
 
-### Assignment 2.2 :arrow_down:
+### Assignment 2.3 :arrow_down:
 Add the custom tags.
  
