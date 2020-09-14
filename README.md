@@ -8,7 +8,10 @@
 - Aksel Stokka Hestnes
 - Christian Føleide
 
+### Se på disse
+
 [Internationalization](https://www.tutorialspoint.com/jsp/jsp_internationalization.htm)
+
 [Custom tags](https://www.tutorialspoint.com/jsp/jsp_custom_tags.htm)
 
 ### Requirements :arrow_down:
