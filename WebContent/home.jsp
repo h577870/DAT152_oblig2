@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <p><jsp:include page="chooselanguage.jsp"/></p>
     <div class="app">
 
     </div>
