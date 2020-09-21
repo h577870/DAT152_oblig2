@@ -27,6 +27,16 @@
 			<h1>
 				<fmt:message key="howAreYou"/>
 			</h1>
+			<h1>
+				<fmt:message key="bedriftsnavn"/>
+			</h1>
+			<img alt="" src="resources/coffe.jpg" width="400" height="300"/>
+			<p>
+				<fmt:message key="produkter"/> <a href="../products"><fmt:message key="produktnavn"/></a>
+			</p>
+			<p>
+				<fmt:message key="copyright"/>
+			</p>
 		</fmt:bundle>
     </div>
 </body>
