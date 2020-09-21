@@ -16,9 +16,18 @@
 </head>
 
 <body>
-    <p><jsp:include page="chooselanguage.jsp"/></p>
+    <p>
+    	<jsp:include page="chooselanguage.jsp"/>
+    </p>
     <div class="app">
-
+		<fmt:bundle basename="resources.home">
+			<h3>
+				<fmt:message key="hello" />
+			</h3>
+			<h1>
+				<fmt:message key="howAreYou"/>
+			</h1>
+		</fmt:bundle>
     </div>
 </body>
 
