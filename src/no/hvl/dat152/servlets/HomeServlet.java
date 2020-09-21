@@ -20,8 +20,10 @@ public class HomeServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	protected void homeGet(HttpServletRequest request, HttpServletResponse response) 
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		
 		//noe greier her...
 		//prøver på å få tak i cookies
 		//Dersom ingen cookie funnet, lager en ny, sender tilbake til home
@@ -40,7 +42,7 @@ public class HomeServlet extends HttpServlet {
 			response.addCookie(lC);
 		}
 		response.sendRedirect("home.jsp");
-
+		
 	}
 	
 }
