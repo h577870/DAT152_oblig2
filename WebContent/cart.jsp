@@ -11,6 +11,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Cart</title>
 </head>
 
@@ -18,11 +19,11 @@
 <p><jsp:include page="chooselanguage.jsp"/></p>
     <div class="app">
     	<fmt:bundle basename="resources.cart">
-    		<h3>
+    		<h1>
     			<fmt:message key ="cart"/>	
-    		</h3>
+    		</h1>
     		
-    		<table border ="1">
+    		<table>
     			<tr>
     				<th> <fmt:message key = "name"/> </th> 
     				<th> <fmt:message key = "description"/> </th>
