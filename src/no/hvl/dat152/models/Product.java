@@ -1,16 +1,29 @@
 package no.hvl.dat152.models;
 
+import java.util.ArrayList;
+
 public class Product {
 	
 	private String name;
 	private String description;
 	//Euro som standard.
 	private double price;
+	private String imgref;
+	
+	private ArrayList<Product> productlist = new ArrayList<>();
+	
+	public Product() {}
 
-	public Product(String name, String description, double price) {
+	public Product(String name, String description, double price, String imgref) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
+		this.imgref = imgref;
+	}
+	
+	public void putProducts() {
+		productlist.add(new Product("Kjeldsberg hele bønner", "Du må ha bønnekvern for å kjøpe denne...", 999.90, "resources/kjeldsberg.png"));
+		productlist.add(new Product("Friele sjokoladekaffe", "Smaker snop", 45.69, "resources/friele.png"));
 	}
 
 	public String getName() {
@@ -35,6 +48,22 @@ public class Product {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	public String getImgref() {
+		return imgref;
+	}
+
+	public void setImgref(String imgref) {
+		this.imgref = imgref;
+	}
+
+	public ArrayList<Product> getProductlist() {
+		return productlist;
+	}
+
+	public void setProductlist(ArrayList<Product> productlist) {
+		this.productlist = productlist;
 	}
 	
 	

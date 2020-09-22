@@ -21,12 +21,6 @@
     </p>
     <div class="app">
 		<fmt:bundle basename="resources.home">
-			<h3>
-				<fmt:message key="hello" />
-			</h3>
-			<h1>
-				<fmt:message key="howAreYou"/>
-			</h1>
 			<h1>
 				<fmt:message key="bedriftsnavn"/>
 			</h1>

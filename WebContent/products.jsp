@@ -21,17 +21,17 @@
     <p><jsp:include page="chooselanguage.jsp"/></p>
     <div class="app">
     <fmt:bundle basename="resources.products">
-		<table class="product-table">
-			<c:forEach items="${productlist}" var="p">
+		<c:forEach items="${productlist}" var="p">
+			<div class=product>
+			<table class="product-table">
+				<tr><td><fmt:message key="produktnavn"/> ${p.name}</td></tr>
+				<tr><td><fmt:message key="produktpris"/> ${p.price}</td></tr>
+				<tr><td><fmt:message key="produktbeskrivelse"/> ${p.description}</td></tr>
+				<tr><td><button type="button"><fmt:message key="knapptekst"/></button></td></tr>
 				<img src="${p.imgref}" alt="Missing photo...">
-				<tr>
-					<td><fmt:message key="produktnavn"/> ${p.name}</td>
-					<td><fmt:message key="produktpris"/> ${p.price}</td>
-					<td><fmt:message key="produktbeskrivelse"/> ${p.description}</td>
-					<td><button type="button"><fmt:message key="knapptekst"/></button></td>
-				</tr>
-			</c:forEach>
-		</table>
+			</table>
+			</div>
+		</c:forEach>
 		<a href="../home"><fmt:message key="hjemlenke"/></a> <a href="../cart"><fmt:message key="handlekurvlenke"/></a>
 		<p><fmt:message key="copyright"/></p>
 	</fmt:bundle>
