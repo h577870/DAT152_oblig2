@@ -17,7 +17,30 @@
 <body>
 <p><jsp:include page="chooselanguage.jsp"/></p>
     <div class="app">
-
+    	<fmt:bundle basename="resources.cart">
+    		<h3>
+    			<fmt:message key ="cart"/>	
+    		</h3>
+    		
+    		<table border ="1">
+    			<tr>
+    				<th> <fmt:message key = "name"/> </th> 
+    				<th> <fmt:message key = "description"/> </th>
+    				<th> <fmt:message key = "price"/> </th> 
+    				<th> <fmt:message key = "quantity"/> </th>
+    				<th> <fmt:message key = "total"/> </th>
+    			</tr>
+    			<tr>
+    				<td> <fmt:message key = "amount"/> </td>
+    				<td> Noe pris </td>
+    			</tr>
+    		</table>
+    		
+    		<br>
+    		<a href="home.jsp"> <fmt:message key ="home"/></a>
+			<a href="products.jsp"> <fmt:message key = "products"/> </a>
+    		
+    	</fmt:bundle>
     </div>
 </body>
 
