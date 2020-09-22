@@ -3,9 +3,19 @@
 table{
     border-collapse: collapse;
     table-layout: initial;
+    
     }
     
 table, th, td {
 	border: 1px solid black;
+	text-align: left;
 }
-    
+
+th, td {
+	padding: 15px;
+}
+
+.lastRow{
+	text-align: right;
+}
+

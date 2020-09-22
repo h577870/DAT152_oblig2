@@ -5,6 +5,7 @@
 
 <!-- JSP for /cart, oppgave 2.2. -->
 
+<!-- forEach er ikke ferdig -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,15 +32,31 @@
     				<th> <fmt:message key = "quantity"/> </th>
     				<th> <fmt:message key = "total"/> </th>
     			</tr>
+    <!--
+     			<c:forEach items ="${productlist}" var ="p">
+    				<tr>
+    					<td><fmt:message key="produktnavn"/> ${p.name}</td>
+    					<td><fmt:message key="produktbeskrivelse"/> ${p.description}</td>
+						<td><fmt:message key="produktpris"/> ${p.price}</td>
+						  
+						<td><fmt:message key ="antall"/> </td> 
+						<td>>fmt:message key ="totalpris"</td>
+						
+					</tr>
+				</c:forEach>
+				
+	-->
     			<tr>
-    				<td> <fmt:message key = "amount"/> </td>
-    				<td> Noe pris </td>
+    				<td colspan = "4" class="lastRow" ><b><fmt:message key = "amount"/></b> </td>
+    				<td > TOTALPRIS </td>
     			</tr>
     		</table>
     		
     		<br>
     		<a href="home.jsp"> <fmt:message key ="home"/></a>
 			<a href="products.jsp"> <fmt:message key = "products"/> </a>
+			<br>
+			<fmt:message key = "copyright"/>
     		
     	</fmt:bundle>
     </div>
