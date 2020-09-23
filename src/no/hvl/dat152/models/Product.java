@@ -24,10 +24,10 @@ public class Product {
 	}
 	
 	public void putProducts() {
-		productlist.add(new Product(1, "Kjeldsberg hele bÃ¸nner", "Du mÃ¥ ha bÃ¸nnekvern for Ã¥ kjÃ¸pe denne...", 999.90, "resources/kjeldsberg.png"));
-		productlist.add(new Product(2, "Friele sjokoladekaffe", "Smaker snop", 45.69, "resources/friele.png"));
+		productlist.add(new Product(0, "Kjeldsberg hele bønner", "Du må ha bønnekvern for å kjøpe denne...", 999.90, "resources/kjeldsberg.png"));
+		productlist.add(new Product(1, "Friele sjokoladekaffe", "Smaker snop", 45.69, "resources/friele.png"));
 	}
-
+	
 	public String getName() {
 		return name;
 	}
@@ -74,6 +74,12 @@ public class Product {
 	
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	@Override
+	public boolean equals(Object product) {
+		Product other = (Product) product;
+		return this.id == other.id;
 	}
 	
 }
