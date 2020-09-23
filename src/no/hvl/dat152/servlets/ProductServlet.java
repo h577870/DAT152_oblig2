@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.jstl.core.Config;
 
+import no.hvl.dat152.models.Cart;
 import no.hvl.dat152.models.Product;
 
 import static no.hvl.dat152.hjelp.UriMapping.PRODUCT_URL;
@@ -22,7 +23,7 @@ public class ProductServlet extends HttpServlet {
 	
 	Product product;
 	ArrayList<Product> productlist;
-	
+		
 	/**
 	 * 
 	 */
@@ -44,4 +45,31 @@ public class ProductServlet extends HttpServlet {
 		System.out.println(locale);
 		request.getRequestDispatcher("/products.jsp").forward(request, response);
 	}
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
+		String qString = request.getQueryString();
+		
+		HttpSession session = request.getSession();
+		Cart cart = (Cart) session.getAttribute("cart");
+		
+		int id = Integer.parseInt(qString);
+		
+		cart.Add(productlist.get(id));
+		cart.Show();
+		session.setAttribute("cart", cart);
+		
+		response.sendRedirect("/products");
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 }
