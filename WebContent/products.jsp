@@ -23,13 +23,15 @@
     <fmt:bundle basename="resources.products">
 		<c:forEach items="${productlist}" var="p">
 			<div class=product>
-			<table class="product-table">
-				<tr><td><fmt:message key="produktnavn"/> ${p.name}</td></tr>
-				<tr><td><fmt:message key="produktpris"/> ${p.price}</td></tr>
-				<tr><td><fmt:message key="produktbeskrivelse"/> ${p.description}</td></tr>
-				<tr><td><button type="button"><fmt:message key="knapptekst"/></button></td></tr>
-				<img src="${p.imgref}" alt="Missing photo...">
-			</table>
+				<form method="POST" action="/products?${p.id}">
+				<table class="product-table">
+					<tr><td><fmt:message key="produktnavn"/> ${p.name}</td></tr>
+					<tr><td><fmt:message key="produktpris"/> ${p.price}</td></tr>
+					<tr><td><fmt:message key="produktbeskrivelse"/> ${p.description}</td></tr>
+					<tr><td><button type="submit"><fmt:message key="knapptekst"/></button></td></tr>
+					<img src="${p.imgref}" alt="Missing photo...">
+				</table>
+				</form>
 			</div>
 		</c:forEach>
 		<a href="../home"><fmt:message key="hjemlenke"/></a> <a href="../cart"><fmt:message key="handlekurvlenke"/></a>
