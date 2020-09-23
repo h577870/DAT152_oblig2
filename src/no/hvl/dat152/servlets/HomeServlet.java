@@ -8,13 +8,16 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.jstl.core.Config;
+
+import no.hvl.dat152.models.Cart;
 
 import static no.hvl.dat152.hjelp.UriMapping.HOME_URL;
 
 @WebServlet("/" + HOME_URL)
 public class HomeServlet extends HttpServlet {
-
+	
 	/**
 	 * 
 	 */
@@ -27,6 +30,18 @@ public class HomeServlet extends HttpServlet {
 		//noe greier her...
 		//prøver på å få tak i cookies
 		//Dersom ingen cookie funnet, lager en ny, sender tilbake til home
+		
+		
+		HttpSession session = request.getSession(false);
+		if (session == null) { //opprett Cart, legg i session
+			
+			Cart cart = new Cart();
+			session = request.getSession(); //overkj�r forrige variabel, (getSession uten argument lager tydeligvis ny session...)
+			session.setAttribute("cart", cart);
+
+			
+		}
+		
 		Cookie[] cookies = request.getCookies();
 		if(cookies != null){
 			for(Cookie cookie : cookies){
