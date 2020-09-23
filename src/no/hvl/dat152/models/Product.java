@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Product {
 	
+	private int id;
 	private String name;
 	private String description;
 	//Euro som standard.
@@ -14,7 +15,8 @@ public class Product {
 	
 	public Product() {}
 
-	public Product(String name, String description, double price, String imgref) {
+	public Product(int id, String name, String description, double price, String imgref) {
+		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -22,8 +24,8 @@ public class Product {
 	}
 	
 	public void putProducts() {
-		productlist.add(new Product("Kjeldsberg hele bønner", "Du må ha bønnekvern for å kjøpe denne...", 999.90, "resources/kjeldsberg.png"));
-		productlist.add(new Product("Friele sjokoladekaffe", "Smaker snop", 45.69, "resources/friele.png"));
+		productlist.add(new Product(1, "Kjeldsberg hele bønner", "Du må ha bønnekvern for å kjøpe denne...", 999.90, "resources/kjeldsberg.png"));
+		productlist.add(new Product(2, "Friele sjokoladekaffe", "Smaker snop", 45.69, "resources/friele.png"));
 	}
 
 	public String getName() {
@@ -66,6 +68,12 @@ public class Product {
 		this.productlist = productlist;
 	}
 	
+	public int getId() {
+		return id;
+	}
 	
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 }
