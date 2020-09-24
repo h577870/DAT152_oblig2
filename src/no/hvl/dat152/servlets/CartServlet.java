@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import no.hvl.dat152.models.Cart;
+
 import static no.hvl.dat152.hjelp.UriMapping.CART_URL;
 
 
@@ -23,6 +25,11 @@ public class CartServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-	
+		
+		Cart cart = (Cart) request.getSession().getAttribute("cart");
+		
+		request.setAttribute("cartlist", cart.getCart());
+		request.getRequestDispatcher("cart.jsp").forward(request, response);
+		
 	}
 }

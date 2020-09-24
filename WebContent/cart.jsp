@@ -23,7 +23,6 @@
     		<h1>
     			<fmt:message key ="cart"/>	
     		</h1>
-    		
     		<table>
     			<tr>
     				<th> <fmt:message key = "name"/> </th> 
@@ -32,20 +31,18 @@
     				<th> <fmt:message key = "quantity"/> </th>
     				<th> <fmt:message key = "total"/> </th>
     			</tr>
-    <!--
-     			<c:forEach items ="${productlist}" var ="p">
+    			
+     			<c:forEach items ="${cartlist}" var ="entry">
     				<tr>
-    					<td><fmt:message key="produktnavn"/> ${p.name}</td>
-    					<td><fmt:message key="produktbeskrivelse"/> ${p.description}</td>
-						<td><fmt:message key="produktpris"/> ${p.price}</td>
-						  
-						<td><fmt:message key ="antall"/> </td> 
-						<td>>fmt:message key ="totalpris"</td>
+    					<td><fmt:message key="produktnavn"/> ${entry.key.name}</td>
+    					<td><fmt:message key="produktbeskrivelse"/> ${entry.key.description}</td>
+						<td><fmt:message key="produktpris"/> ${entry.key.price}</td>
+						<td><fmt:message key ="antall"/>${entry.value}</td> 
+						<td><fmt:message key ="totalpris"/>20</td>
 						
 					</tr>
 				</c:forEach>
 				
-	-->
     			<tr>
     				<td colspan = "4" class="lastRow" ><b><fmt:message key = "amount"/></b> </td>
     				<td > TOTALPRIS </td>
@@ -53,8 +50,8 @@
     		</table>
     		
     		<br>
-    		<a href="home.jsp"> <fmt:message key ="home"/></a>
-			<a href="products.jsp"> <fmt:message key = "products"/> </a>
+    		<a href="home"> <fmt:message key ="home"/></a>
+			<a href="products"> <fmt:message key = "products"/> </a>
 			<br>
 			<fmt:message key = "copyright"/>
     		
