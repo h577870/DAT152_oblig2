@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="t" uri="WEB-INF/tags.tld" %>
 
 <!-- JSP for /cart, oppgave 2.2. -->
 
@@ -53,10 +54,11 @@
     		<a href="home"> <fmt:message key ="home"/></a>
 			<a href="products"> <fmt:message key = "products"/> </a>
 			<br>
-			<fmt:message key = "copyright"/>
     		
     	</fmt:bundle>
     </div>
+    
+    <t:copyright tekst="2008"> </t:copyright>
 </body>
 
 </html>
