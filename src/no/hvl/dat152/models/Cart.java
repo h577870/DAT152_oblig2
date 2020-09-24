@@ -19,7 +19,7 @@ public class Cart {
 	public void Add(Product p) {
 		if (cart.containsKey(p)) {
 			Integer prev = cart.get(p);
-			prev = prev.intValue();
+			prev = prev.intValue() + 1;
 			System.out.println("Upping quantity of product " + p.getName() + " to " + prev);
 			cart.put(p, prev++);
 		} else {
