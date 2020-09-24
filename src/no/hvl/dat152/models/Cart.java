@@ -7,9 +7,11 @@ import java.util.Map;
 public class Cart {
 		
 	private Map<Product,Integer> cart;
+	private double total;
 	
 	public Cart() {
 		cart = new HashMap<Product, Integer>();
+		this.total = 0.0;
 	}
 	
 	public Map<Product, Integer> getCart() {
@@ -20,10 +22,8 @@ public class Cart {
 		if (cart.containsKey(p)) {
 			Integer prev = cart.get(p);
 			prev = prev.intValue() + 1;
-			System.out.println("Upping quantity of product " + p.getName() + " to " + prev);
 			cart.put(p, prev++);
 		} else {
-			System.out.println("Added new product " + p.getName() + " to the cart");
 			cart.put(p, 1);
 		}
 	}
@@ -40,5 +40,23 @@ public class Cart {
 			
 		});
 	}
+	
+	public double getTotal() {
+		return total;
+	}
+	
+	public void setTotal() {
+		
+		double total = 0;
+		
+		for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+			
+			total += entry.getKey().getPrice() * entry.getValue();
+			entry.getKey().setTotal(entry.getValue() * entry.getKey().getPrice());
+		}
+		
+		this.total = total;
+	}
+	
 
 }

@@ -38,14 +38,14 @@
     					<td>${entry.key.description}</td>
 						<td>${entry.key.price}</td>
 						<td>${entry.value}</td> 
-						<td>20</td>
+						<td>${entry.key.total}</td>
 						
 					</tr>
 				</c:forEach>
 				
     			<tr>
     				<td colspan = "4" class="lastRow" ><b><fmt:message key = "amount"/></b> </td>
-    				<td > TOTALPRIS </td>
+    				<td > ${total} </td>
     			</tr>
     		</table>
     		

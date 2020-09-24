@@ -27,8 +27,9 @@ public class CartServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		Cart cart = (Cart) request.getSession().getAttribute("cart");
-		
+		cart.setTotal();
 		request.setAttribute("cartlist", cart.getCart());
+		request.setAttribute("total", cart.getTotal());
 		request.getRequestDispatcher("cart.jsp").forward(request, response);
 		
 	}

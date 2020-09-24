@@ -9,23 +9,26 @@ public class Product {
 	private String description;
 	//Euro som standard.
 	private double price;
+	private double total;
 	private String imgref;
 	
 	private ArrayList<Product> productlist = new ArrayList<>();
 	
 	public Product() {}
 
-	public Product(int id, String name, String description, double price, String imgref) {
+	public Product(int id, String name, String description, double price, double total, String imgref) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
 		this.imgref = imgref;
+		this.total = total;
+		
 	}
 	
 	public void putProducts() {
-		productlist.add(new Product(0, "Kjeldsberg hele bønner", "Du må ha bønnekvern for å kjøpe denne...", 999.90, "resources/kjeldsberg.png"));
-		productlist.add(new Product(1, "Friele sjokoladekaffe", "Smaker snop", 45.69, "resources/friele.png"));
+		productlist.add(new Product(0, "Kjeldsberg hele bønner", "Du må ha bønnekvern for å kjøpe denne...", 999.90, 0.0, "resources/kjeldsberg.png"));
+		productlist.add(new Product(1, "Friele sjokoladekaffe", "Smaker snop", 45.69, 0.0, "resources/friele.png"));
 	}
 	
 	public String getName() {
@@ -74,6 +77,14 @@ public class Product {
 	
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public void setTotal(double total) {
+		this.total = total;
+	}
+	
+	public double getTotal() {
+		return total;
 	}
 	
 	@Override
