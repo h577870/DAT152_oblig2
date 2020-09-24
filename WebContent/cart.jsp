@@ -34,11 +34,11 @@
     			
      			<c:forEach items ="${cartlist}" var ="entry">
     				<tr>
-    					<td><fmt:message key="produktnavn"/> ${entry.key.name}</td>
-    					<td><fmt:message key="produktbeskrivelse"/> ${entry.key.description}</td>
-						<td><fmt:message key="produktpris"/> ${entry.key.price}</td>
-						<td><fmt:message key ="antall"/>${entry.value}</td> 
-						<td><fmt:message key ="totalpris"/>20</td>
+    					<td>${entry.key.name}</td>
+    					<td>${entry.key.description}</td>
+						<td>${entry.key.price}</td>
+						<td>${entry.value}</td> 
+						<td>20</td>
 						
 					</tr>
 				</c:forEach>
