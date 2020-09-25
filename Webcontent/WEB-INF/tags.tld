@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+<taglib xmlns="http:/java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	
+	<tlib-version>1.0</tlib-version>
+	<short-name>obli2-tags</short-name>
+	<uri>oblig2</uri>
+	
+	<tag>
+		<description>Copyright</description>
+		<name>copyright</name>
+		<tag-class>no.hvl.dat152.hjelp.TagHandler</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>since</name>
+		</attribute>
+		<attribute>
+			<name>present</name>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<description>Short description</description>
+		<name>description</name>
+		<tag-class>no.hvl.dat152.hjelp.TagHandler</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>maxchar</name>
+		</attribute>
+	</tag>
+	
+
+</taglib>

@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="t" uri="WEB-INF/tags.tld" %>
 
 <!-- JSP for /products, oppgave 2.2. -->
 
@@ -35,9 +36,11 @@
 			</div>
 		</c:forEach>
 		<a href="../home"><fmt:message key="hjemlenke"/></a> <a href="../cart"><fmt:message key="handlekurvlenke"/></a>
-		<p><fmt:message key="copyright"/></p>
+		
 	</fmt:bundle>
     </div>
+    <br>
+    <t:copyright since="2008" present ="2020"> </t:copyright>
 </body>
 
 </html>

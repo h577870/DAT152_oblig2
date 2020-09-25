@@ -57,8 +57,8 @@
     		
     	</fmt:bundle>
     </div>
-    
-    <t:copyright tekst="2008"> </t:copyright>
+    <br>
+    <t:copyright since="2008" present ="2020"> </t:copyright>
 </body>
 
 </html>
