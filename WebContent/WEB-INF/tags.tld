@@ -16,7 +16,10 @@
 		<tag-class>no.hvl.dat152.hjelp.TagHandler</tag-class>
 		<body-content>scriptless</body-content>
 		<attribute>
-			<name>tekst</name>
+			<name>since</name>
+		</attribute>
+		<attribute>
+			<name>present</name>
 		</attribute>
 	</tag>
 	
