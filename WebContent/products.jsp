@@ -27,7 +27,7 @@
 				<form method="POST" action="/products?${p.id}">
 				<table class="product-table">
 					<tr><td><fmt:message key="produktnavn"/> ${p.name}</td></tr>
-					<tr><td><fmt:message key="produktpris"/> ${p.price}</td></tr>
+					<tr><td><fmt:message key="produktpris"/><fmt:formatNumber type="currency" value="${p.price}"/></td></tr>
 					<tr><td><fmt:message key="produktbeskrivelse"/> ${p.description}</td></tr>
 					<tr><td><button type="submit"><fmt:message key="knapptekst"/></button></td></tr>
 					<img src="${p.imgref}" alt="Missing photo...">
