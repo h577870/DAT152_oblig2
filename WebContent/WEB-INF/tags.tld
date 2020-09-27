@@ -26,10 +26,12 @@
 	<tag>
 		<description>Short description</description>
 		<name>description</name>
-		<tag-class>no.hvl.dat152.hjelp.TagHandler</tag-class>
+		<tag-class>no.hvl.dat152.hjelp.MaxCharTagHandler</tag-class>
 		<body-content>scriptless</body-content>
-		<attribute>
-			<name>maxchar</name>
+		<attribute >
+			<name>tekst</name>
+			<required>true</required>
+     		<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
 	
