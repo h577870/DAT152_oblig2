@@ -36,7 +36,7 @@
      			<c:forEach items ="${cartlist}" var ="entry">
     				<tr>
     					<td>${entry.key.name}</td>
-    					<td>${entry.key.description}</td>
+    					<td><t:description tekst="${entry.key.description}"></t:description></td>
 						<td>${entry.key.price}</td>
 						<td>${entry.value}</td> 
 						<td>${entry.key.total}</td>

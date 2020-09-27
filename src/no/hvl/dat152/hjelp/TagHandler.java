@@ -16,7 +16,7 @@ public class TagHandler extends SimpleTagSupport{
 	@Override
 	public void doTag() throws JspException, IOException {
 		JspWriter out = getJspContext().getOut();
-		out.print("Â© " + toRoman(since) + "-" + toRoman(present) + " HÃ¸gskulen pÃ¥ Vestlandet");
+		out.print("© " + toRoman(since) + "-" + toRoman(present) + " Høgskulen På Vestlandet");
 	}
 	
 	public void setSince(int since) {
