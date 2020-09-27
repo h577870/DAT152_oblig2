@@ -37,16 +37,16 @@
     				<tr>
     					<td>${entry.key.name}</td>
     					<td><t:description tekst="${entry.key.description}"></t:description></td>
-						<td>${entry.key.price}</td>
+						<td><fmt:formatNumber type="currency" value="${entry.key.price}"/></td>
 						<td>${entry.value}</td> 
-						<td>${entry.key.total}</td>
+						<td><fmt:formatNumber type="currency" value="${entry.key.total}"/></td>
 						
 					</tr>
 				</c:forEach>
 				
     			<tr>
     				<td colspan = "4" class="lastRow" ><b><fmt:message key = "amount"/></b> </td>
-    				<td > ${total} </td>
+    				<td > <fmt:formatNumber type="currency" value="${total}"/></td>
     			</tr>
     		</table>
     		
