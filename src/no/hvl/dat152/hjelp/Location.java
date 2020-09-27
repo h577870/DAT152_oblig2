@@ -2,7 +2,7 @@ package no.hvl.dat152.hjelp;
 
 public class Location {
 	private static String engelsk = "en_US";
-	private static String norsk = "no_No";
+	private static String norsk = "no_NO";
 	private static String spansk = "es_ES";
 	
 	
@@ -10,14 +10,14 @@ public class Location {
 	}
 	
 	public boolean isValid(String lokasjon) {
-		if(lokasjon == "en_US") {
+		if(lokasjon.equals(engelsk)) {
 			return true;
-		}else if (lokasjon == "no_NO") {
+		}else if (lokasjon.equals(norsk)) {
 			return true;
-		}else if(lokasjon =="es_ES") {
+		}else if(lokasjon.equals(spansk)) {
 			return true;
-		}else {
-			return false;
 		}
+			return false;
+		
 	}
 }
